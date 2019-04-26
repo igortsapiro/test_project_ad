@@ -28,5 +28,6 @@ Route::group(['middleware' => 'isAuth'], function () {
     Route::post('update', 'AdController@update')->name('ad.update');
     Route::post('update/{ad}', 'AdController@update')->name('ad.update')->middleware('isOwnerAd');
     Route::delete('delete/{ad}', 'AdController@destroy')->name('ad.delete')->middleware('isOwnerAd');
-    Route::get('{ad}', 'AdController@show')->name('ad.show');
+
 });
+Route::get('{ad}', 'AdController@show')->name('ad.show');
