@@ -24,11 +24,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div class="col-12">
 
         @include('components.header')
 
         <main class="content">
+
+            @include('components.success-message')
 
             @yield('content')
 
