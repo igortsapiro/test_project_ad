@@ -1,71 +1,22 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost you and your team's skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Тестовое задание 
+ 
+ 
+Цель:​ создать сайт объявлений 
+ Технические требования: используя laravel php framework, нужно создать базовый         функционал создания, редактирования и удаления объявлений. 
+ 
+● Код должен соответствовать стандартам PSR-1 / PSR-2       (​http://www.php-fig.org/psr/psr-1/​, ​http://www.php-fig.org/psr/psr-2/​) (можно   настроить в IDE, например phpstorm) ● Код должен быть доступен на github / bitbucket. ● На фронтенде можно (но не обязательно) использовать twitter bootstrap         (​http://getbootstrap.com​) 
+ Время выполнения: ​До недели (с выходными) со времени ознакомления. 
+ Бизнес требования: 1. Стартовая страница сайта (uri = ‘/’) должна иметь форму авторизации, список            объявлений и ссылку ‘Create Ad’, ведущую на страницу создания/редактирования         объявления для авторизованных пользователей. a) Авторизация представляет собой форму из двух полей: username и password.          Username должно быть уникальным и не пустым. Если юзера с данным           username нет в базе данных, его мы просто должны создать и сразу же             авторизовать, пароль при этом не должен быть пустым. Если же юзер c данным             username существует и пароль верный, то мы должны авторизовать юзера.          Если юзер авторизован, то вместо формы авторизации мы должны отобразить          username пользователя и ссылку logout (uri = ‘logout’), при клике на которую            юзер будет вылогинен с сайта.  b) Объявления должны располагаться по 5 сущностей на странице.        Соответственно должна быть реализована pagination для объявлений. Каждое        объявление должно включать: title, description, author name и created_at         datetime. Если текущее объявление создано текущим авторизированным       юзером, то должна быть еще кнопка delete (uri = ’/delete/$id’, где $id - id              текущего объявления), при клике на которую объявление будет удалятся, а          юзер будет перенаправлен на стартовую страницу сайта. 
+c) Если пользователь авторизован на сайте, то на стартовой странице сайта          должна быть ссылка ‘Create Ad’, которая будет вести на страницу создания           объявления (uri = ‘/edit’) 
+ 
+2. Страница создания объявления (uri = ‘/edit’) позволяет авторизованным юзерам          создавать объявления. Данная страница представляет собой форму создания        объявления. Данная форма состоит из поля title, description и кнопки create. Title и             description должны быть не пустыми. При нажатии на кнопку create, объявление           должно быть создано, а юзер должен быть перенаправлен на страницу просмотра           объявления (uri = ‘/$id’, где $id - id объявления). 
+ 
+3. Страница просмотра объявления (uri = ‘/$id’, где $id - id объявления), представляет             собой title, description, author name и creation date. Если текущее объявление создано            текущим авторизированным юзером, то должна быть еще кнопка delete (uri =           ’/delete/$id’, где $id - id текущего объявления), при клике на которую объявление будет             удалятся, а юзер будет перенаправлен на стартовую страницу сайта. 
+ 
+ 
+ 
+Дополнительные требования (не обязательные к выполнению): 
+ 
+4. Авторизованные пользователи на стартовой странице и на странице просмотра          объявления (uri = ‘/$id’, где $id - id объявления) должны также видеть кнопку edit (uri =                ‘/edit/$id’, где $id - id объявления). При нажатие на данную кнопку, они должны быть              перенаправлены на страницу редактирования объявления (uri = ‘/edit/$id’, где $id - id            объявления). Страницы редактирования и создания объявлений должны иметь        одинаковый функционал. Страница редактирования объявления должна иметь кнопку        save вместо кнопки create, которая располагается на странице создания объявления. 
+ 
+5. На стартовой странице сайта title объявления нужно сделать ссылкой, которая           будет вести на страницу просмотра объявления (uri = ‘/$id’, где $id - id объявления). 
