@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Ad;
+use App\Http\Requests\AdRequest;
 use Illuminate\Http\Request;
 
 class AdController extends Controller
@@ -37,12 +38,12 @@ class AdController extends Controller
     /**
      * Update the Ad in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param AdRequest|Request $request
      * @param Ad $ad
      * @return \Illuminate\Http\Response
      * @internal param int $id
      */
-    public function update(Request $request, Ad $ad = null)
+    public function update(AdRequest $request, Ad $ad = null)
     {
         if (empty($ad)) {
             $ad = new Ad;

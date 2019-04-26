@@ -11,7 +11,10 @@
                     @guest
                         <!--nothing to do-->
                     @else
-                        <a class="float-right nav-item nav-link p-1" href="{{ route('ad.edit', ['ad' => $ad->id]) }}">Edit Ad</a>
+                        @if(auth()->user()->id == $ad->user_id)
+                            <a class="float-right nav-item nav-link p-1" href="{{ route('ad.edit', ['ad' => $ad->id]) }}">Edit Ad</a>
+                        @endif
+
                      @endguest
                 </div>
 

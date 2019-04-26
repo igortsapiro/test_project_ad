@@ -26,9 +26,9 @@
                                     @csrf
                                     {{ method_field('delete') }}
                                 </form>
-                            @endif
 
-                            <a class="float-right nav-item nav-link p-1" href="{{ route('ad.edit', ['ad' => $ad->id]) }}">Edit Ad</a>
+                                <a class="float-right nav-item nav-link p-1" href="{{ route('ad.edit', ['ad' => $ad->id]) }}">Edit Ad</a>
+                            @endif
                         @endguest
                     </div>
 

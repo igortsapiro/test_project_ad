@@ -22,9 +22,11 @@ Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 /**
  * Ad routes
  */
-Route::get('edit', 'AdController@edit')->name('ad.edit');
-Route::get('edit/{ad}', 'AdController@edit')->name('ad.edit');
-Route::post('update', 'AdController@update')->name('ad.update');
-Route::post('update/{ad}', 'AdController@update')->name('ad.update');
-Route::delete('delete/{ad}', 'AdController@destroy')->name('ad.delete');
-Route::get('{ad}', 'AdController@show')->name('ad.show');
+Route::group(['middleware' => 'isAuth'], function () {
+    Route::get('edit', 'AdController@edit')->name('ad.edit');
+    Route::get('edit/{ad}', 'AdController@edit')->name('ad.edit')->middleware('isOwnerAd');
+    Route::post('update', 'AdController@update')->name('ad.update');
+    Route::post('update/{ad}', 'AdController@update')->name('ad.update')->middleware('isOwnerAd');
+    Route::delete('delete/{ad}', 'AdController@destroy')->name('ad.delete')->middleware('isOwnerAd');
+    Route::get('{ad}', 'AdController@show')->name('ad.show');
+});
